@@ -6,7 +6,7 @@
 
 ### Skenario & Problem Statement
 
-Selamat! Tim Anda adalah sebuah agensi web profesional yang baru saja ditunjuk untuk mengambil alih proyek galeri foto online bernama "TechStore". Proyek ini sebelumnya dikerjakan oleh seorang developer junior, dan hasilnya masih jauh dari standar profesional. Klien melaporkan bahwa gambar utama tidak muncul dan mereka khawatir tentang keamanan proyek.
+Selamat! Tim Anda adalah sebuah agensi web profesional yang baru saja ditunjuk untuk mengambil alih proyek "TechStore". Proyek ini sebelumnya dikerjakan oleh seorang developer junior, dan hasilnya masih jauh dari standar profesional. Klien melaporkan bahwa websitenya jelek dan mereka khawatir tentang keamanan proyek.
 
 Tugas utama tim Anda adalah melakukan audit total, memperbaiki semua masalah, merapikan repository agar sesuai standar industri, dan mempersiapkan situs ini untuk peluncuran resminya (Versi 1.0).
 
@@ -19,10 +19,10 @@ Sebelum mengubah apapun, tim Anda harus berperan sebagai detektif digital untuk 
 
 1. Analisis Struktur Aset: Gunakan perintah CLI untuk menavigasi dan memetakan struktur file. Identifikasi file mana saja yang lokasinya tidak standar (misalnya, gambar di root folder, bukan di dalam folder assets).
 
-2. Perburuan Bug Visual: Tanpa membuka browser, gunakan tool pencarian teks di terminal (seperti grep atau Select-String) pada file index.html untuk menemukan baris kode yang me-render gambar utama. Analisis dan temukan penyebab kenapa gambar tersebut tidak muncul.
+2. Perburuan Bug Visual: Terjadi bug styling css tidak ter-render dengan benar. Analisis dan temukan penyebabnya.
 
 3. Audit Keamanan & Riwayat:
-   - Gunakan perintah Git untuk menelusuri riwayat dan temukan commit spesifik di mana file logs/debug.log pertama kali ditambahkan.
+   - Gunakan perintah Git untuk menelusuri riwayat dan temukan commit spesifik di mana file debug.log pertama kali ditambahkan.
 
    - Di dalam file log tersebut, identifikasi baris pasti yang mengandung informasi sensitif (API Key).
 
@@ -32,14 +32,11 @@ Sebelum mengubah apapun, tim Anda harus berperan sebagai detektif digital untuk 
 
 Sekarang saatnya membersihkan kekacauan. Semua pekerjaan di fase ini harus dilakukan di dalam branch baru bernama hotfix-cleanup.
 
-1. Refaktor Struktur Aset: Buat struktur direktori yang logis. Pindahkan semua file gambar (.png, .jpg) ke dalam folder assets untuk konsistensi. 
+1. Refaktor Struktur Aset: Buat struktur direktori yang logis.Misalnya pindahkan semua file gambar (.png, .jpg) ke dalam folder assets untuk konsistensi. 
 
-2. Perbaikan Kritis:
-   - Perbaiki bug salah ketik pada path gambar di index.html yang Anda temukan di Fase 1.
+2. Perbaiki bug-bug yang anda temukan
 
-   - Sesuaikan path gambar lain di index.html jika diperlukan setelah pemindahan file di poin 1.
-
-3. Pembersihan Riwayat (Tugas Paling Sulit): Hapus total file logs/debug.log dari seluruh riwayat Git. Hanya menghapusnya di commit baru tidaklah cukup; jejak file dan isinya harus benar-benar lenyap dari sejarah proyek.
+3. Pembersihan Riwayat: Hapus total file debug.log dari seluruh riwayat Git. Hanya menghapusnya di commit baru tidaklah cukup; jejak file dan isinya harus benar-benar lenyap dari sejarah proyek.
 
 4. Commit Profesional: Lakukan commit untuk setiap perubahan besar dengan menggunakan pesan commit yang konvensional dan deskriptif (misal: fix:, refactor:, docs:).
 
@@ -66,3 +63,4 @@ Fitur baru sudah siap di develop. Sekarang saatnya mempersiapkan peluncuran resm
 2. Integrasi Final: Setelah konflik selesai dan fitur" yang dibuat terintegrasi, Merge branch develop yang sudah lengkap ke main.
 
 3. Tagging Rilis: Buat sebuah tag bernama v1.0.0 pada commit terakhir di main untuk menandai peluncuran resmi landing page "TechStore".
+
